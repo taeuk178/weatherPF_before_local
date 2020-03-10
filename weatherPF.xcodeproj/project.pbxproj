@@ -19,6 +19,8 @@
 		A98D43DB2415F30A00AAE82C /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43DA2415F30A00AAE82C /* WeatherCell.swift */; };
 		A98D43DD24161B4800AAE82C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43DC24161B4800AAE82C /* WeatherModel.swift */; };
 		A98D43DF241628DB00AAE82C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43DE241628DB00AAE82C /* Api.swift */; };
+		A98D43E6241783F500AAE82C /* ThreeDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43E5241783F500AAE82C /* ThreeDays.swift */; };
+		A98D43E82417842E00AAE82C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43E72417842E00AAE82C /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		A98D43DC24161B4800AAE82C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		A98D43DE241628DB00AAE82C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		A98D43E124162B8300AAE82C /* CurrentWeather.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CurrentWeather.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A98D43E224171BF800AAE82C /* ThreeDaysWeather.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreeDaysWeather.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A98D43E5241783F500AAE82C /* ThreeDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDays.swift; sourceTree = "<group>"; };
+		A98D43E72417842E00AAE82C /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +110,10 @@
 		A98D43D82415EA3300AAE82C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A98D43DC24161B4800AAE82C /* WeatherModel.swift */,
 				A98D43DE241628DB00AAE82C /* Api.swift */,
+				A98D43DC24161B4800AAE82C /* WeatherModel.swift */,
+				A98D43E5241783F500AAE82C /* ThreeDays.swift */,
+				A98D43E72417842E00AAE82C /* CurrentWeather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A98D43E124162B8300AAE82C /* CurrentWeather.playground */,
+				A98D43E224171BF800AAE82C /* ThreeDaysWeather.playground */,
 			);
 			path = prototype;
 			sourceTree = "<group>";
@@ -199,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A98D43DF241628DB00AAE82C /* Api.swift in Sources */,
+				A98D43E82417842E00AAE82C /* CurrentWeather.swift in Sources */,
 				A98D43D62415E97C00AAE82C /* DaysCell.swift in Sources */,
 				A98D43C12415D99300AAE82C /* ViewController.swift in Sources */,
 				A98D43D22415E96100AAE82C /* ImageCell.swift in Sources */,
@@ -207,6 +216,7 @@
 				A98D43BF2415D99300AAE82C /* SceneDelegate.swift in Sources */,
 				A98D43DD24161B4800AAE82C /* WeatherModel.swift in Sources */,
 				A98D43DB2415F30A00AAE82C /* WeatherCell.swift in Sources */,
+				A98D43E6241783F500AAE82C /* ThreeDays.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = weatherPF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = weatherPF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

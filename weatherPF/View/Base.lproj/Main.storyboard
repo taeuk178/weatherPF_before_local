@@ -118,32 +118,46 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr5-gx-wNc">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jr5-gx-wNc">
                                                                         <rect key="frame" x="20" y="5" width="60" height="30"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="79k-ky-Cib"/>
                                                                             <constraint firstAttribute="height" constant="30" id="mAY-qg-fxg"/>
                                                                         </constraints>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.moon.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="z1g-P4-9hP">
-                                                                        <rect key="frame" x="5" y="34" width="90" height="58.5"/>
+                                                                        <rect key="frame" x="5" y="34" width="90" height="48.5"/>
                                                                     </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddl-el-d6b">
+                                                                        <rect key="frame" x="25" y="80" width="50" height="20"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="50" id="IfG-Xl-TBt"/>
+                                                                            <constraint firstAttribute="height" constant="20" id="yMl-9V-1W1"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="bottom" secondItem="z1g-P4-9hP" secondAttribute="bottom" constant="10" id="bND-fl-Mjj"/>
+                                                                    <constraint firstItem="ddl-el-d6b" firstAttribute="centerX" secondItem="Rwn-r7-Z2P" secondAttribute="centerX" id="8qA-P5-Pwp"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="ddl-el-d6b" secondAttribute="bottom" id="YvH-8O-w7O"/>
                                                                     <constraint firstItem="Jr5-gx-wNc" firstAttribute="top" secondItem="Rwn-r7-Z2P" secondAttribute="top" constant="5" id="ciA-Ym-8Jj"/>
                                                                     <constraint firstItem="Jr5-gx-wNc" firstAttribute="centerX" secondItem="Rwn-r7-Z2P" secondAttribute="centerX" id="d3C-kC-TQk"/>
                                                                     <constraint firstAttribute="trailing" secondItem="z1g-P4-9hP" secondAttribute="trailing" constant="5" id="fBc-HH-KaB"/>
+                                                                    <constraint firstItem="ddl-el-d6b" firstAttribute="top" secondItem="z1g-P4-9hP" secondAttribute="bottom" id="fP6-eB-FdT"/>
                                                                     <constraint firstItem="z1g-P4-9hP" firstAttribute="leading" secondItem="Rwn-r7-Z2P" secondAttribute="leading" constant="5" id="tAT-uw-JKL"/>
                                                                     <constraint firstItem="z1g-P4-9hP" firstAttribute="top" secondItem="Jr5-gx-wNc" secondAttribute="bottom" id="tR6-aQ-sA9"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="100" height="100"/>
                                                             <connections>
+                                                                <outlet property="imageView" destination="z1g-P4-9hP" id="OpL-6f-5gd"/>
                                                                 <outlet property="telabel" destination="Jr5-gx-wNc" id="o5V-uG-yJS"/>
+                                                                <outlet property="tempLabel" destination="ddl-el-d6b" id="Du4-jf-Yth"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>

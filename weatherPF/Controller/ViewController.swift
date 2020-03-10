@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         return formatter
     }()
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -27,9 +28,15 @@ class ViewController: UIViewController {
             [weak self] in
             self?.tableView.reloadData()
         }
+        WeatherDataSource.shared.fetchForecast(lat: 37.498206, lon: 127.02761) {
+            [weak self] in
+            self?.tableView.reloadData()
+        }
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
     }
 
 
