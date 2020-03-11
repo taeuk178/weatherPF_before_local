@@ -17,6 +17,7 @@ struct ForecastData {
 struct Forecast: Codable{
     struct Weather: Codable {
         struct Forecast3Days: Codable {
+            
             struct Fcst3Hour: Codable {
                 @objcMembers class Sky: NSObject, Codable {
                 
@@ -93,6 +94,7 @@ struct Forecast: Codable{
                     let temp64hour: String
                     let temp67hour: String
                 }
+                
                 let sky: Sky
                 let temperature: Temperature
                 
@@ -120,7 +122,9 @@ struct Forecast: Codable{
                     }
                     return data
                 }
+                
             }
+            let timeRelease: String
             let fcst3hour: Fcst3Hour
         }
         let forecast3days: [Forecast3Days]

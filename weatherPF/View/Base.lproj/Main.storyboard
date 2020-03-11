@@ -183,42 +183,48 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강남구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHY-5g-M6p">
-                                                    <rect key="frame" x="20" y="7" width="52" height="46"/>
+                                                    <rect key="frame" x="20" y="5" width="55" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="eEM-4t-aWZ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-l6-zZo">
-                                                    <rect key="frame" x="314" y="7" width="80" height="46"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16 / 10" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-l6-zZo">
+                                                    <rect key="frame" x="309" y="7" width="65" height="46"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="dTz-CI-YPW"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="Xwr-S5-DQ3"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.moon" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wVD-1S-CwH">
-                                                    <rect key="frame" x="234" y="5.5" width="60" height="47"/>
+                                                    <rect key="frame" x="212" y="5.5" width="60" height="47"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="17S-lP-gwg"/>
-                                                        <constraint firstAttribute="width" constant="60" id="G03-TU-wIS"/>
+                                                        <constraint firstAttribute="height" constant="50" id="HTC-ty-0DI"/>
+                                                        <constraint firstAttribute="width" constant="60" id="hPH-Zn-ocr"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Fdc-l6-zZo" firstAttribute="leading" secondItem="wVD-1S-CwH" secondAttribute="trailing" constant="20" id="6cq-C4-TQr"/>
-                                                <constraint firstItem="Fdc-l6-zZo" firstAttribute="centerY" secondItem="wVD-1S-CwH" secondAttribute="centerY" id="7yK-YY-Dpz"/>
-                                                <constraint firstItem="Fdc-l6-zZo" firstAttribute="top" secondItem="rdY-Jr-jQt" secondAttribute="top" constant="7" id="Blt-zH-tKI"/>
-                                                <constraint firstAttribute="bottom" secondItem="jHY-5g-M6p" secondAttribute="bottom" constant="7" id="PH1-7V-3UI"/>
-                                                <constraint firstAttribute="bottom" secondItem="Fdc-l6-zZo" secondAttribute="bottom" constant="7" id="UwW-vf-gVa"/>
-                                                <constraint firstItem="jHY-5g-M6p" firstAttribute="leading" secondItem="rdY-Jr-jQt" secondAttribute="leading" constant="20" symbolic="YES" id="eat-s6-oFg"/>
-                                                <constraint firstItem="jHY-5g-M6p" firstAttribute="top" secondItem="rdY-Jr-jQt" secondAttribute="top" constant="7" id="j8W-du-07u"/>
-                                                <constraint firstAttribute="trailing" secondItem="Fdc-l6-zZo" secondAttribute="trailing" constant="20" symbolic="YES" id="jSd-Yd-e50"/>
-                                                <constraint firstItem="wVD-1S-CwH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="jHY-5g-M6p" secondAttribute="trailing" constant="162" id="zUS-oE-f2U"/>
+                                                <constraint firstAttribute="bottom" secondItem="Fdc-l6-zZo" secondAttribute="bottom" constant="7" id="7X9-bR-suH"/>
+                                                <constraint firstItem="wVD-1S-CwH" firstAttribute="centerY" secondItem="rdY-Jr-jQt" secondAttribute="centerY" id="LzW-gt-Q7z"/>
+                                                <constraint firstAttribute="trailing" secondItem="Fdc-l6-zZo" secondAttribute="trailing" constant="40" id="M1v-vI-HTv"/>
+                                                <constraint firstAttribute="bottom" secondItem="jHY-5g-M6p" secondAttribute="bottom" constant="5" id="RoB-nM-IRj"/>
+                                                <constraint firstItem="jHY-5g-M6p" firstAttribute="top" secondItem="rdY-Jr-jQt" secondAttribute="top" constant="5" id="UoC-kf-RK9"/>
+                                                <constraint firstItem="Fdc-l6-zZo" firstAttribute="top" secondItem="rdY-Jr-jQt" secondAttribute="top" constant="7" id="b5y-cJ-1cH"/>
+                                                <constraint firstItem="wVD-1S-CwH" firstAttribute="centerX" secondItem="rdY-Jr-jQt" secondAttribute="centerX" constant="35" id="dIz-ve-6X0"/>
+                                                <constraint firstItem="jHY-5g-M6p" firstAttribute="leading" secondItem="rdY-Jr-jQt" secondAttribute="leading" constant="20" id="jjv-bA-D43"/>
+                                                <constraint firstItem="wVD-1S-CwH" firstAttribute="centerY" secondItem="jHY-5g-M6p" secondAttribute="centerY" id="o8S-Ur-tug"/>
+                                                <constraint firstItem="Fdc-l6-zZo" firstAttribute="centerY" secondItem="wVD-1S-CwH" secondAttribute="centerY" id="xBJ-Oo-dfh"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="city" destination="jHY-5g-M6p" id="84x-42-g46"/>
+                                            <outlet property="days" destination="jHY-5g-M6p" id="AMN-IF-XEF"/>
+                                            <outlet property="images" destination="wVD-1S-CwH" id="Pjb-Re-Uas"/>
+                                            <outlet property="temp" destination="Fdc-l6-zZo" id="1oj-WA-D9v"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

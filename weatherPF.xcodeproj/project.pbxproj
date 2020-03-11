@@ -21,6 +21,7 @@
 		A98D43DF241628DB00AAE82C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43DE241628DB00AAE82C /* Api.swift */; };
 		A98D43E6241783F500AAE82C /* ThreeDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43E5241783F500AAE82C /* ThreeDays.swift */; };
 		A98D43E82417842E00AAE82C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43E72417842E00AAE82C /* CurrentWeather.swift */; };
+		A98D43EB241860FF00AAE82C /* SixDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98D43EA241860FF00AAE82C /* SixDays.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		A98D43E224171BF800AAE82C /* ThreeDaysWeather.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ThreeDaysWeather.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A98D43E5241783F500AAE82C /* ThreeDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDays.swift; sourceTree = "<group>"; };
 		A98D43E72417842E00AAE82C /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		A98D43E924185BE600AAE82C /* Sixdays.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sixdays.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A98D43EA241860FF00AAE82C /* SixDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixDays.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +115,9 @@
 			children = (
 				A98D43DE241628DB00AAE82C /* Api.swift */,
 				A98D43DC24161B4800AAE82C /* WeatherModel.swift */,
-				A98D43E5241783F500AAE82C /* ThreeDays.swift */,
 				A98D43E72417842E00AAE82C /* CurrentWeather.swift */,
+				A98D43E5241783F500AAE82C /* ThreeDays.swift */,
+				A98D43EA241860FF00AAE82C /* SixDays.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +135,7 @@
 			children = (
 				A98D43E124162B8300AAE82C /* CurrentWeather.playground */,
 				A98D43E224171BF800AAE82C /* ThreeDaysWeather.playground */,
+				A98D43E924185BE600AAE82C /* Sixdays.playground */,
 			);
 			path = prototype;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				A98D43D62415E97C00AAE82C /* DaysCell.swift in Sources */,
 				A98D43C12415D99300AAE82C /* ViewController.swift in Sources */,
 				A98D43D22415E96100AAE82C /* ImageCell.swift in Sources */,
+				A98D43EB241860FF00AAE82C /* SixDays.swift in Sources */,
 				A98D43BD2415D99300AAE82C /* AppDelegate.swift in Sources */,
 				A98D43D42415E97100AAE82C /* TimeCell.swift in Sources */,
 				A98D43BF2415D99300AAE82C /* SceneDelegate.swift in Sources */,

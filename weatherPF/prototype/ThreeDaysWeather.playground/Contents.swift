@@ -82,8 +82,10 @@ struct ThreeDaysWeather: Codable {
                 let sky: Sky
                 let temperature: Temperature
             }
+            let timeRelease: String
             let fcst3hour: Fcst3Hour
         }
+        
         let forecast3days: [Forecast3Days]
     }
     struct Result: Codable {
@@ -127,6 +129,7 @@ let task = session.dataTask(with: url) { (data, response, error) in
             
             forecast.weather.forecast3days.first?.fcst3hour.sky
             forecast.weather.forecast3days.first?.fcst3hour.temperature
+            forecast.weather.forecast3days.first?.timeRelease
             
         }catch{
             print(error)

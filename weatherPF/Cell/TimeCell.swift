@@ -15,6 +15,7 @@ class TimeCell: UITableViewCell {
     let dateFormatter: DateFormatter = {
        let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ko_KR")
+        formatter.timeZone = TimeZone(secondsFromGMT: 18000)
         formatter.dateFormat = "HH:00"
         
         
@@ -29,15 +30,16 @@ class TimeCell: UITableViewCell {
         return formatter
     }()
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         let cellSize = CGSize(width:100 , height:100)
-
+        
+        //MARK: CollectionViewCell setup
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal //.horizontal
         layout.itemSize = cellSize
-//        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         collectionView.setCollectionViewLayout(layout, animated: true)
@@ -49,10 +51,12 @@ class TimeCell: UITableViewCell {
         collectionView.dataSource = self
         self.collectionView.reloadData()
     }
+    
 
 }
 
 extension TimeCell: UICollectionViewDelegate, UICollectionViewDataSource{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return WeatherDataSource.shared.forecastList.count
     }
@@ -61,7 +65,9 @@ extension TimeCell: UICollectionViewDelegate, UICollectionViewDataSource{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weatherCell", for: indexPath) as! WeatherCell
         
+        
         let target = WeatherDataSource.shared.forecastList[indexPath.row]
+        
         cell.telabel.text = dateFormatter.string(from: target.date)
         cell.imageView.image = UIImage(named: target.skyCode)
         

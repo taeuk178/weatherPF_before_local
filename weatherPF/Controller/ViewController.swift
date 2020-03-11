@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let dateFormatter: DateFormatter = {
+       let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "Ko_kr")
+        return formatter
+    }()
+    
     //날씨 소수점은 15.6, 15.00 -> 15
     let tempFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -32,10 +38,13 @@ class ViewController: UIViewController {
             [weak self] in
             self?.tableView.reloadData()
         }
-        
+        WeatherDataSource.shared.fetchDays(lat: 37.498206, lon: 127.02761) {
+            [weak self] in
+            self?.tableView.reloadData()
+        }
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.separatorStyle = .none
         
     }
 
@@ -54,7 +63,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         case 1:
             return 1
         case 2:
-            return 7
+            return WeatherDataSource.shared.forecastday.count
         default:
             return 0
         }
@@ -89,6 +98,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "daysCell", for: indexPath) as! DaysCell
             
+            let target = WeatherDataSource.shared.forecastday[indexPath.row]
+            dateFormatter.dateFormat = "M.d (E)"
+            cell.images.image = UIImage(named: target.skyCode)
+            cell.days.text = dateFormatter.string(for: target.date)
+            cell.temp.text = "\(target.maxtemp) / \(target.mintemp)"
             return cell
             
         default:

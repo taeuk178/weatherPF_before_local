@@ -10,6 +10,8 @@ import UIKit
 
 class DaysCell: UITableViewCell {
 
-    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var temp: UILabel!
+    @IBOutlet weak var days: UILabel!
+    @IBOutlet weak var images: UIImageView!
 
 }
