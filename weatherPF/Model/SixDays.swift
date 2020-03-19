@@ -33,6 +33,10 @@ struct Sixdays: Codable {
                 let pmName6day: String
                 let pmCode7day: String
                 let pmName7day: String
+                let pmCode8day: String
+                let pmName8day: String
+                let pmCode9day: String
+                let pmName9day: String
             }
             @objcMembers class Temperature: NSObject, Codable {
                 
@@ -48,6 +52,10 @@ struct Sixdays: Codable {
                 let tmin6day: String
                 let tmax7day: String
                 let tmin7day: String
+                let tmax8day: String
+                let tmin8day: String
+                let tmax9day: String
+                let tmin9day: String
             }
             let sky: Sky
             let temperature: Temperature
@@ -56,7 +64,7 @@ struct Sixdays: Codable {
                 var data = [SixData]()
                 let now = Date()
                 
-                for number in 2...7{
+                for number in 2...9{
                     var key = "pmCode\(number)day"
                     guard let skyCode = sky.value(forKey: key) as? String else {
                         continue

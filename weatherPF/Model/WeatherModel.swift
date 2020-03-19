@@ -19,7 +19,6 @@ class WeatherDataSource {
     var summary: WeatherSummary?
     var forecastList = [ForecastData]()
     var datesss: Forecast?
-    
     var forecastday = [SixData]()
     
     
@@ -27,12 +26,14 @@ class WeatherDataSource {
     let workQueue = DispatchQueue(label: "apiQueue", attributes: .concurrent)
     
     func fetch(location: CLLocation, completion: @escaping () -> ()) {
+        
         group.enter()
         workQueue.async {
             self.fetchSummary(lat: location.coordinate.latitude, lon: location.coordinate.longitude) {
                 self.group.leave()
             }
         }
+        
         group.enter()
         workQueue.async {
             self.fetchForecast(lat: location.coordinate.latitude, lon: location.coordinate.longitude) {
@@ -47,7 +48,7 @@ class WeatherDataSource {
     func fetchSummary(lat: Double, lon: Double, completion: @escaping () -> ()) {
         
         let apiurl = "https://apis.openapi.sk.com/weather/current/minutely?version=2&lat=\(lat)&lon=\(lon)&appKey=\(appkey)"
-
+        
         let url = URL(string: apiurl)!
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -78,21 +79,22 @@ class WeatherDataSource {
             do{
                 let decoder = JSONDecoder()
                 self.summary = try decoder.decode(WeatherSummary.self, from: data)
-            
+                
             }catch{
                 print(error)
             }
         }
-
+        
         task.resume()
     }
     //MARK: Threedays
+    
     func fetchForecast(lat: Double, lon: Double, completion: @escaping () -> ()) {
-        forecastday.removeAll()
+        forecastList.removeAll()
         
         
-        let apiurl = "https://apis.openapi.sk.com/weather/forecast/3days?version=2&lat=37.498206&lon=127.02761&appKey=\(appkey)"
-            
+        let apiurl = "https://apis.openapi.sk.com/weather/forecast/3days?version=2&lat=\(lat)&lon=\(lon)&appKey=\(appkey)"
+        
         let url = URL(string: apiurl)!
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -120,33 +122,31 @@ class WeatherDataSource {
             guard let data = data else{
                 fatalError("Invalid Data")
             }
-            
             do{
                 let decoder = JSONDecoder()
                 let forecast = try decoder.decode(Forecast.self, from: data)
-                self.datesss = try decoder.decode(Forecast.self, from: data)
                 if let list = forecast.weather.forecast3days.first?.fcst3hour.arrayRepresentation(){
                     self.forecastList = list
-                    
                 }
-                
                 
             }catch{
                 print(error)
             }
         }
-
+        
         task.resume()
-
-
+        
+        
     }
+    
+    
     
     func fetchDays(lat: Double, lon: Double, completion: @escaping () -> ()) {
         forecastList.removeAll()
         
         
         let apiurl = "https://apis.openapi.sk.com/weather/forecast/6days?version=2&lat=\(lat)&lon=\(lon)&appKey=\(appkey)"
-            
+        
         let url = URL(string: apiurl)!
         let session = URLSession.shared
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -185,9 +185,10 @@ class WeatherDataSource {
                 print(error)
             }
         }
-
+        
         task.resume()
-
-
+        
+        
     }
+    
 }
